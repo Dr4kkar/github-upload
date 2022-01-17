@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX5</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+
+
+			function monedas(){
+
+				if (document.getElementById("elec").value=="T"){
+
+					document.getElementById("mon2").value = (document.getElementById("mon").value)*166.386;
+
+				}
+				else{
+
+					document.getElementById("mon2").value = (document.getElementById("mon").value)/166.386;
+
+				}
+			}
+			
+
+
+
+
+	</script>
+
+		<form name="num">
+			Cantidad:<input type="number" name="monedes" id="mon" >
+
+			T/F:<input type="text" name="eleccio" id="elec" >
+
+			Cambio:<input type="text" name="monedes2" id="mon2" readonly="true">
+
+			<br>
+			<br>
+
+			<input type="button" name="conv" value="Convertir" onclick="monedas()">
+
+			<input type="reset" name="reset" value="Borrar">
+
+		</form>
+
+</body>
+</html>

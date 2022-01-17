@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function probar(){
+
+			var codi = document.getElementById('isbn').value;
+
+			codi = codi.replace(/-/g,"");
+
+			var final=0;
+
+			for (var i = 0; i < codi.length-1; i++) {
+				final = final + codi.charAt(i)*(i+1);
+			}
+
+			final = final%11;
+
+			if (final == 10) {
+				final = "X";
+			}
+
+			if (final==codi.charAt(codi.length-1)) {
+				alert("El codi es correcte");
+			}
+			else{
+				alert("El codi es incorrecte")
+			}
+
+
+
+		}
+
+
+
+	</script>
+
+
+	<form name="num">
+
+			ISBN:<input type="text" name="isbn" id="isbn">
+
+			<br>
+			<br>
+
+			<input type="button" name="conv" value="Convertir" onclick="probar()">
+
+			<input type="reset" name="reset" value="Borrar">
+
+	</form>
+
+
+</body>
+</html>

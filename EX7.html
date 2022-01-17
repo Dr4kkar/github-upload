@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		function probar(){
+
+			var codi = document.getElementById('isbn').value;
+			var final1=0;
+			var final2=0;
+			var i=0;
+			
+			while(i<=codi.length){
+				
+				final = codi.charAt(i)*2;
+				
+				if (final>9) {
+					final1 = final1 + (codi.charAt(i)*2)-9;
+				}
+				else{
+					final1 = final1 + final
+				}
+
+				i+=2;
+			}
+			
+			for (var i = 1; i <= codi.length; i+=2) {
+				final2 = final2 + parseInt(codi.charAt(i));
+			}
+
+			suma = final1+final2
+
+			if (suma%10==0) {
+				alert("El codi es correcte");
+			}
+			else{
+				alert("El codi es incorrecte")
+			}
+
+
+
+		}
+
+
+
+	</script>
+
+
+	<form name="num">
+
+			Tarjeta:<input type="text" name="isbn" id="isbn">
+
+			<br>
+			<br>
+
+			<input type="button" name="conv" value="Convertir" onclick="probar()">
+
+			<input type="reset" name="reset" value="Borrar">
+
+	</form>
+
+
+</body>
+</html>

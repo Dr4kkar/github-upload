@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX2</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var texto = prompt();
+
+	var caracteres="abcdefghyjklmnñopqrstuvwxyz0123456789";
+	
+
+
+	function alfa(texto){
+	texto = texto.toLowerCase();
+  	 for(i=0; i<texto.length; i++){
+    	  if (caracteres.indexOf(texto.charAt(i))!=-1){	
+
+    	  }
+    	  else{
+    	  	return 0;
+    	  }
+  	 }
+  	 return 1;
+	} 
+
+	if(alfa(texto)==1){
+		alert("El texto solo contiene caracteres alfanumericos")
+	}
+	else{
+		alert("El texto contiene caracteres no alfanumericos")
+	}
+
+
+</script>
+	
+
+</body>
+</html>

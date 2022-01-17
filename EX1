@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX1</title>
+</head>
+<script type="text/javascript">
+	document.write("<strong>Aquesta pàgina ha estat donada de baixa</strong>");
+
+	var myVar;
+
+	myVar=setTimeout(mensaje,5000);
+
+	function mensaje(){
+		document.location='https://www.google.com';
+	}
+
+
+</script>
+
+
+<body>
+
+</body>
+</html>

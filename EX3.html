@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EX3</title>
+	<script type="text/javascript">
+		
+		//fi,f2 - posició inicial 
+		//f2,c2 - posició d’arribada
+
+		var f1=parseInt(prompt("Indrodueix la fila inicial"));
+		var c1=parseInt(prompt("Indrodueix la columna inicial"));
+
+		var f2=parseInt(prompt("Indrodueix la fila final"));
+		var c2=parseInt(prompt("Indrodueix la columna final"));
+
+
+		function alfil(f1,c1,f2,c2){
+
+			if ((f2-f1)==1 && (c2-c1)==0 || (f2-f1)==1 && (c2-c1)==1 ) {
+				return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+		if (alfil (f1,c1,f2,c2)==1) {
+			alert("És un movimento correcto");
+		}
+		else{
+			alert("És un movimento incorrecto");
+		}
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
